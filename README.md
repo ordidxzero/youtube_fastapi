@@ -44,7 +44,7 @@ youtube_fastapi
 
 `v1/endpoints` : endpoint 중에서도 관련성 있는 endpoint끼리 묶기 위해서 만든 폴더입니다.
 
-`v1/dtos` : Data Access Object. database에 접근하는 객체를 저장해놓은 폴더입니다.
+`v1/daos` : Data Access Object. database에 접근하는 객체를 저장해놓은 폴더입니다.
 
 `v1/models` : 이 폴더 안에는 `v1` Endpoints에 대한 data model을 정의하는 파일들이 들어갑니다.
 
