@@ -45,6 +45,8 @@ youtube_fastapi
 
 `core/utils` : endpoint에서 필요한 util들이 들어갑니다.
 
+`core/errors` : Error 형식을 클래스로 정의해놓은 폴더입니다.
+
 `core/settings.py` : Pydantic의 Settings Management에 매우 유용하며, 동일한 변수를 재선언하지 않고 사용할 수 있습니다. 설정 및 환경 변수에 대한 설명서를 확인하는 것이 유용할 수 있습니다.
 
 `tests` : 테스트 코드가 들어갑니다.
