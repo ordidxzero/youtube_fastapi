@@ -6,6 +6,10 @@ youtube_fastapi
 ├── core
 │   ├── models
 │   │   ├── __init__.py
+│   │   ├── base.py
+│   │   └── conn.py
+│   ├── models
+│   │   ├── __init__.py
 │   │   ├── database.py
 │   │   └── v1
 │   │       └── __init__.py
@@ -30,7 +34,9 @@ youtube_fastapi
 
 [StackOverFlow](https://stackoverflow.com/questions/64943693/what-are-the-best-practices-for-structuring-a-fastapi-project) 및 [블로그](https://dingrr.com/blog/post/python-fastapi-%EB%A1%9C-%EB%B0%B1%EC%97%94%EB%93%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0-2%ED%99%94-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B5%AC%EC%A1%B0)를 참고했습니다.
 
-`core/models` : `database.py`는 데이터베이스 설정파일이고, 이 폴더 안에는  data model을 정의하는 파일들이 들어갑니다.
+`core/db` : 데이터베이스를 세팅하는 파일들이 들어갑니다.
+
+`core/models` : 이 폴더 안에는  data model을 정의하는 파일들이 들어갑니다.
 
 `core/schemas` : `schema`는 pydantic 모델을 의미합니다. `schemas`로 이름을 지은 이유는 FastAPI가 OpenAPI specification을 기반이고, 이 안의 파일들이 사실상 Swagger 생성부터 엔드포인트의 request body까지 어디에서나 사용하는 OpenAPI schema를 생성하기 때문입니다. 
 
