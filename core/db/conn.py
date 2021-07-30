@@ -5,10 +5,12 @@ from sqlalchemy.engine import Engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm.session import sessionmaker
 
+logging.basicConfig(level=logging.INFO)
+
 # 딱 한 곳에서만 DB Session Pool을 유지하기 위해서 싱글톤을 사용해야한다.
 class SQLAlchemy:
     # _engine, _session 초기화
-    def __init__(self, app: FastAPI, **kwargs):
+    def __init__(self, app: FastAPI = None, **kwargs):
         self._engine: Engine = None
         self._session: sessionmaker = None
         if app is not None:

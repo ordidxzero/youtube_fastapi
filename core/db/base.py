@@ -10,7 +10,7 @@ class BaseMixin:
         DateTime,
         nullable=False,
         default=func.utc_timestamp(),
-        on_update=func.utc_timestamp(),
+        onupdate=func.utc_timestamp(),
     )
 
     def __init__(self):

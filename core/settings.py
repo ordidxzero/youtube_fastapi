@@ -1,4 +1,5 @@
 from os import environ
+from typing import List
 from pydantic import BaseSettings
 
 
@@ -15,6 +16,8 @@ class GlobalSettings(BaseSettings):
     DB_POOL_RECYCLE: int = 900
     DB_ECHO: bool = True
     PROJ_RELOAD: bool = True
+    TRUSTED_HOST: List[str] = ["*"]
+    ALLOW_SITE: List[str] = ["*"]
 
     class Config:
         env_file = ".env.local"
