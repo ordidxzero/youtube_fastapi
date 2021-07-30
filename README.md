@@ -4,31 +4,36 @@
 youtube_fastapi
 ├── main.py
 ├── core
-│   ├── models
+│   ├── db
 │   │   ├── __init__.py
 │   │   ├── base.py
 │   │   └── conn.py
-│   ├── models
+│   ├── middlewares
 │   │   ├── __init__.py
-│   │   ├── database.py
-│   │   └── v1
-│   │       └── __init__.py
-│   ├── schemas
+│   │   └── middleware.py
+│   ├── utils
 │   │   ├── __init__.py
-│   │   ├── schema.py
-│   │   └── v1
-│   │       └── __init__.py
+│   │   └── util.py
 │   └── settings.py
 ├── tests
 │   ├── __init__.py
 │   └── v1
 │       └── __init__.py
 └── v1
-    ├── api.py
+    ├── __init__.py
+    ├── daos
+    │   ├── __init__.py
+    │   └── dao.py
     ├── endpoints
-    │   ├── endpoint.py
-    │   └── __init__.py
-    └── __init__.py 
+    │   ├── __init__.py
+    │   └── endpoint.py
+    ├── models
+    │   ├── __init__.py
+    │   └── model.py
+    ├── schemas
+    │   ├── __init__.py
+    │   └── schema.py
+    └── api.py
 
 ```
 
