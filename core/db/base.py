@@ -1,8 +1,18 @@
+from sqlalchemy import Column, Integer, DateTime, func
 from sqlalchemy.orm import Session
 from core.db.conn import db
 
 
 class BaseMixin:
+    id = Column(Integer, autoincrement=True, primary_key=True, unique=True)
+    created_at = Column(DateTime, nullable=False, default=func.utc_timestamp())
+    updated_at = Column(
+        DateTime,
+        nullable=False,
+        default=func.utc_timestamp(),
+        on_update=func.utc_timestamp(),
+    )
+
     def __init__(self):
         # Query
         self._q = None
