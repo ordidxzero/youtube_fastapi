@@ -41,5 +41,3 @@ youtube_fastapi
 `v1` : v1 endpoint들이 들어갑니다. `v1/api.py`에 v1 endpoint들을 모아두는 router가 들어갑니다. 버전업을 하는 경우 `v2`, `v3`...로 네이밍을 할 수 있습니다. `models` 안에 `v1` 폴더를 만들어서 버전별로 모델을 구분할 수 도 있고, 이 폴더에 모델을 넣어서 `models` 폴더를 없앨수도 있습니다.
 
 `consts.py` : 상수를 넣는 파일입니다.
-
-`config.py` : 환경별로 달라지는 변수를 넣는 파일입니다.
