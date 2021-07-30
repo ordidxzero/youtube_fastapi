@@ -63,7 +63,6 @@ youtube_fastapi
 - [ ] 로그인
 - [ ] 프로필 수정
 - [ ] 프로필 이미지 변경
-- [ ] 댓글 작성 / 수정 / 삭제
 
 ### Video
 
@@ -73,6 +72,9 @@ youtube_fastapi
 - [ ] 비디오의 댓글 불러오기
 - [ ] 썸네일 이미지 설정 기능
 
+### Comment
+
+- [ ] 댓글 작성 / 수정 / 삭제
 ### Future
 
 - [ ] SocketIO 및 WebRTC를 이용한 스트리밍?
