@@ -36,15 +36,15 @@ youtube_fastapi
 
 `core/db` : 데이터베이스를 세팅하는 파일들이 들어갑니다.
 
-`core/models` : 이 폴더 안에는  data model을 정의하는 파일들이 들어갑니다.
-
-`core/schemas` : `schema`는 pydantic 모델을 의미합니다. `schemas`로 이름을 지은 이유는 FastAPI가 OpenAPI specification을 기반이고, 이 안의 파일들이 사실상 Swagger 생성부터 엔드포인트의 request body까지 어디에서나 사용하는 OpenAPI schema를 생성하기 때문입니다. 
-
 `core/settings.py` : Pydantic의 Settings Management에 매우 유용하며, 동일한 변수를 재선언하지 않고 사용할 수 있습니다. 설정 및 환경 변수에 대한 설명서를 확인하는 것이 유용할 수 있습니다.
 
 `tests` : 테스트 코드가 들어갑니다.
 
-`v1` : v1 endpoint들이 들어갑니다. `v1/api.py`에 v1 endpoint들을 모아두는 router가 들어갑니다. 버전업을 하는 경우 `v2`, `v3`...로 네이밍을 할 수 있습니다. `models` 안에 `v1` 폴더를 만들어서 버전별로 모델을 구분할 수 도 있고, 이 폴더에 모델을 넣어서 `models` 폴더를 없앨수도 있습니다.
+`v1` : v1 endpoint들이 들어갑니다. `v1/api.py`에 v1 endpoint들을 모아두는 router가 들어갑니다. 버전업을 하는 경우 `v2`, `v3`...로 네이밍을 할 수 있습니다.
+
+`v1/models` : 이 폴더 안에는 `v1` Endpoints에 대한 data model을 정의하는 파일들이 들어갑니다.
+
+`v1/schemas` : `schema`는 pydantic 모델을 의미합니다. `schemas`로 이름을 지은 이유는 FastAPI가 OpenAPI specification을 기반이고, 이 안의 파일들이 사실상 Swagger 생성부터 엔드포인트의 request body까지 어디에서나 사용하는 OpenAPI schema를 생성하기 때문입니다. 이 폴더 안에는 `v1` Endpoints에 대한 schema를 정의하는 파일들이 들어갑니다.
 
 `consts.py` : 상수를 넣는 파일입니다.
 
